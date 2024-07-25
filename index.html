@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/favicon-32x32.png" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <img src="assets/logo.svg" rel="logo" class="header-logo" />
+      <div class="main-container">
+        <div class="percent">
+          <div class="bill-click">
+            <label for="click-input" class="bill-style">Bill</label>
+            <input type="number" id="bill-input" placeholder="0" />
+          </div>
+          <div class="tips">
+            <span>Select Tip %</span>
+            <div class="tips-one">
+              <button class="button-one">5%</button>
+              <button class="button-one">10%</button>
+              <button class="button-one">15%</button>
+              <button class="button-one">25%</button>
+              <button class="button-one">50%</button>
+              <input placeholder="custom" class="custom" id="custom" />
+            </div>
+          </div>
+          <div class="people-style">
+            <label for="people-input" class="number-people-style"
+              >Number of People</label
+            >
+            <input type="number" id="people-input" placeholder="0" />
+          </div>
+        </div>
+        <div class="results">
+          <div class="tip" id="tip">
+            <p class="tip-total-amount">
+              Tip amount <br />
+              <span class="person-style"> /person </span>
+            </p>
+            <span class="payment-type">$0.00</span>
+          </div>
+          <div class="total" id="total">
+            <p class="tip-total-amount">
+              Total <br />
+              <span class="person-style">/person </span>
+            </p>
+            <span class="payment-type">$0.00</span>
+          </div>
+          <button class="reset-button" id="reset-button">RESET</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

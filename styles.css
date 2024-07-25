@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Space Mono;
+  font-weight: 700;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #c5e4e7;
+}
+
+.main-container {
+  background: white;
+  box-shadow: 0px 32px 43px 0px #4fa6af33;
+  padding: 15px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+#bill-input {
+  border: none;
+  background-color: #f3f9fa;
+  padding: 12px;
+  border-radius: 4px;
+}
+.bill-style {
+  color: #5e7a7d;
+}
+
+.percent {
+  display: flex;
+  flex-direction: column;
+  gap: 87px;
+}
+
+.tips {
+  display: grid;
+  gap: 7px;
+}
+
+.tips-one {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 9px;
+}
+
+.button-one {
+  background-color: #00474b;
+  color: white;
+  font-size: 24px;
+  padding: 13px;
+  border: none;
+  border-radius: 7px;
+}
+
+.bill-click {
+  display: flex;
+  flex-direction: column;
+}
+.custom {
+  width: 147.81px;
+  background-color: #f3f9fa;
+  color: #547878;
+  font-size: 24px;
+  border: none;
+  padding: 16px;
+}
+
+.people-style {
+  display: flex;
+  flex-direction: column;
+}
+
+.number-people-style {
+  color: #5e7a7d;
+}
+
+#people-input {
+  border: none;
+  background-color: #f3f9fa;
+  padding: 12px;
+  border-radius: 4px;
+  color: #5e7a7d;
+}
+
+.results {
+  background-color: #00474b;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  border-radius: 18px;
+}
+
+.tip {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.person-style {
+  color: #7f9d9f;
+}
+
+.tip-total-amount {
+  color: white;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.payment-type {
+  color: #26c2ae;
+  font-size: 32px;
+  letter-spacing: -0.6666666865348816px;
+}
+.reset-button {
+  color: #00474b;
+  background-color: #26c2ae;
+  border: none;
+  font-size: 20px;
+  width: 281px;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .calculator {
+    height: 100vh;
+  }
+  .main-container {
+    flex-direction: row;
+    gap: 48px;
+    padding: 30px;
+  }
+
+  .tips-one {
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  .button-one {
+    padding: 15px;
+  }
+
+  .results {
+    padding: 64px;
+  }
+
+  .reset-button {
+    margin-top: 144px;
+  }
+}
