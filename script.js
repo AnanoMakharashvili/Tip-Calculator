@@ -59,6 +59,8 @@ tipsButtons.map((button) => {
 number_Of_People.addEventListener("input", (event) => {
   if (event.target.value == 0) {
     errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
   }
   updateInfo();
 });
