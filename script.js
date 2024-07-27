@@ -61,6 +61,16 @@ customInput.addEventListener("input", (event) => {
   percent = parseInt(event.target.value);
 });
 
+function resetAll() {
+  billInput.value = "";
+  number_Of_People.value = "";
+  customInput.value = "";
+  tip_amount.textContent = "$0.00";
+  eachPersonTotal.textContent = "$0.00";
+  percent = null;
+}
+
 resetButton.addEventListener("click", () => {
+  resetAll();
   resetButton.style.backgroundColor = " #0D686D";
 });
