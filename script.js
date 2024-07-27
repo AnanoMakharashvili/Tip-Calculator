@@ -2,8 +2,8 @@ const billInput = document.getElementById("bill-input");
 const number_Of_People = document.getElementById("people-input");
 const tipsButtons = Array.from(document.querySelectorAll(".tips button"));
 let customInput = document.getElementById("custom");
-let tip_amount = document.getElementById("tip");
-let eachPersonTotal = document.getElementById("total");
+let tip_amount = document.getElementById("payment-one-type");
+let eachPersonTotal = document.getElementById("payment-two-type");
 const resetButton = document.getElementById("reset-button");
 
 let percent;
@@ -16,10 +16,21 @@ function updateInfo() {
   if (!percent || numberOfPeople === 0) {
     return;
   }
+  console.log("total amount:", total_amount);
+
   let tipAmount = (total_amount * percent) / 100 / numberOfPeople;
   let total = ((total_amount * percent) / 100 + total_amount) / numberOfPeople;
+  console.log("tip amount:", tipAmount);
+  console.log("total per person:", total);
+
   tip_amount.textContent = "$" + tipAmount.toFixed(2);
   eachPersonTotal.textContent = "$" + total.toFixed(2);
+  console.log("tip_amount textContent:", tip_amount.textContent);
+
+  tip_amount.style.color = " #26C2AE";
+  eachPersonTotal.style.color = " #26C2AE";
+  tip_amount.style.fontSize = "30px";
+  eachPersonTotal.style.fontSize = "30px";
 }
 
 billInput.addEventListener("input", (event) => {
@@ -48,4 +59,8 @@ number_Of_People.addEventListener("input", () => {
 
 customInput.addEventListener("input", (event) => {
   percent = parseInt(event.target.value);
+});
+
+resetButton.addEventListener("click", () => {
+  resetButton.style.backgroundColor = " #0D686D";
 });
