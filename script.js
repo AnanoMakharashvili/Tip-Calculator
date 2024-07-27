@@ -5,10 +5,13 @@ let customInput = document.getElementById("custom");
 let tip_amount = document.getElementById("payment-one-type");
 let eachPersonTotal = document.getElementById("payment-two-type");
 const resetButton = document.getElementById("reset-button");
+const errorMessage = document.getElementById("error-message");
+console.log(errorMessage);
 
 let percent;
 let colorChanger;
 let billValue = 0;
+let people = 0;
 
 function updateInfo() {
   let total_amount = Number(billInput.value);
@@ -53,7 +56,10 @@ tipsButtons.map((button) => {
   });
 });
 
-number_Of_People.addEventListener("input", () => {
+number_Of_People.addEventListener("input", (event) => {
+  if (event.target.value == 0) {
+    errorMessage.style.display = "block";
+  }
   updateInfo();
 });
 
