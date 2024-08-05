@@ -6,12 +6,11 @@ let tip_amount = document.getElementById("payment-one-type");
 let eachPersonTotal = document.getElementById("payment-two-type");
 const resetButton = document.getElementById("reset-button");
 const errorMessage = document.getElementById("error-message");
-console.log(errorMessage);
 
 let percent;
 let colorChanger;
 let billValue = 0;
-let people = 0;
+let people = 1;
 
 function updateInfo() {
   let total_amount = Number(billInput.value);
@@ -19,21 +18,18 @@ function updateInfo() {
   if (!percent || numberOfPeople === 0) {
     return;
   }
-  console.log("total amount:", total_amount);
-
   let tipAmount = (total_amount * percent) / 100 / numberOfPeople;
   let total = ((total_amount * percent) / 100 + total_amount) / numberOfPeople;
-  console.log("tip amount:", tipAmount);
-  console.log("total per person:", total);
+
+  if (billInput.value.length > 6) {
+    tip_amount.style.fontSize = "20px";
+    eachPersonTotal.style.fontSize = "20px";
+  }
 
   tip_amount.textContent = "$" + tipAmount.toFixed(2);
   eachPersonTotal.textContent = "$" + total.toFixed(2);
-  console.log("tip_amount textContent:", tip_amount.textContent);
-
   tip_amount.style.color = " #26C2AE";
   eachPersonTotal.style.color = " #26C2AE";
-  tip_amount.style.fontSize = "30px";
-  eachPersonTotal.style.fontSize = "30px";
 }
 
 billInput.addEventListener("input", (event) => {
